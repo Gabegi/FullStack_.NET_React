@@ -220,6 +220,9 @@ namespace eShop.API.Data
                     QuantityInStock = 100
                 },
             };
+
+            context.Products.AddRange(products);
+            context.SaveChanges();
         }
-    }
+    }   
 }
