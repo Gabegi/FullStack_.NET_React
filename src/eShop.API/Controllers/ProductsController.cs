@@ -1,5 +1,6 @@
 ﻿
 using eShop.API.Data;
+using eShop.API.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,9 @@ namespace eShop.API.Controllers
     public class ProductsController(StoreContext context) : ControllerBase
     {
         [HttpGet] 
-        public 
+        public ActionResult<List<Product>> GetProducts()
+        {
+            return context.Products.ToList();
+        }
     }
 }
