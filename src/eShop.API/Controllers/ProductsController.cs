@@ -15,5 +15,14 @@ namespace eShop.API.Controllers
         {
             return context.Products.ToList();
         }
+
+        [HttpGet("{id}")]
+        public ActionResult<Product> GetProduct(int id)
+        {
+            var product = context.Products.Find(id);
+            if (product == null) return NotFound();
+
+            return product;
+        }
     }
 }
