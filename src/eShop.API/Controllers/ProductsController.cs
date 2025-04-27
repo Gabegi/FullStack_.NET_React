@@ -1,7 +1,6 @@
 ﻿
 using eShop.API.Data;
 using eShop.API.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eShop.API.Controllers
