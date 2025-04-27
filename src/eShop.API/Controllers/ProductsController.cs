@@ -2,6 +2,7 @@
 using eShop.API.Data;
 using eShop.API.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace eShop.API.Controllers
 {
@@ -10,15 +11,15 @@ namespace eShop.API.Controllers
     public class ProductsController(StoreContext context) : ControllerBase
     {
         [HttpGet] 
-        public ActionResult<List<Product>> GetProducts()
+        public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            return context.Products.ToList();
+            return await context.Products.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Product> GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            var product = context.Products.Find(id);
+            var product = await context.Products.FindAsync(id);
             if (product == null) return NotFound();
 
             return product;
