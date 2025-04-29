@@ -1,19 +1,21 @@
 const products = [
-  {name: 'product1', price:100.00},
-  {name: 'product2', price:200.00}
-]
+  { name: "product1", price: 100.0 },
+  { name: "product2", price: 200.0 },
+];
 
 function App() {
-
   return (
-      <div> 
- <h1>Restore</h1>      
- <ul>{products.map(item => (
-  <li>{item.name} - {item.price} </li>
- ))}</ul>  
- </div>
-
-  )
+    <div>
+      <h1>Restore</h1>
+      <ul>
+        {products.map((item) => (
+          <li key={item.name}>
+            {item.name} - {item.price}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default App
+export default App;
