@@ -3,7 +3,7 @@
 function App() {
 
   return (
-      <div style={{fontSize:'1.2rem'}}> eShop</div>
+      <div style={{fontSize:'1.6rem'}}> eShop</div>
 
   )
 }
