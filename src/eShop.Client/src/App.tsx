@@ -20,7 +20,7 @@ function App() {
           </li>
         ))}
       </ul>
-      <button onClick={addProduct}></button>
+      <button onClick={addProduct}>Add Product</button>
     </div>
   );
 }
