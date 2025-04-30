@@ -6,6 +6,10 @@ function App() {
     { name: "product2", price: 200.0 },
   ]);
 
+  const addProduct = () => {
+    setProducts([...products, { name: "product3", price: 3 }]);
+  };
+
   return (
     <div>
       <h1>Restore</h1>
@@ -16,6 +20,7 @@ function App() {
           </li>
         ))}
       </ul>
+      <button onClick={addProduct}></button>
     </div>
   );
 }
