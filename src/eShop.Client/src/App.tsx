@@ -9,7 +9,10 @@ function App() {
   const addProduct = () => {
     setProducts((prevState) => [
       ...prevState,
-      { name: "product" + prevState.length + 1, price: prevState.length * 100 },
+      {
+        name: "product" + prevState.length + 1,
+        price: prevState.length * 100 + 100,
+      },
     ]);
   };
 
