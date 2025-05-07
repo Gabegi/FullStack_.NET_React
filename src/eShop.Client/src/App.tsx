@@ -1,10 +1,9 @@
 import { useState } from "react";
 
 function App() {
-  const [products, setProducts] = useState([
-    { name: "product1", price: 100.0 },
-    { name: "product2", price: 200.0 },
-  ]);
+  const [products, setProducts] = useState<{ name: string; price: number }[]>(
+    []
+  );
 
   const addProduct = () => {
     setProducts((prevState) => [
