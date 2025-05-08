@@ -14,6 +14,7 @@ function App() {
     setProducts((prevState) => [
       ...prevState,
       {
+        id: 
         name: "product" + (prevState.length + 1),
         price: prevState.length * 100 + 100,
       },
