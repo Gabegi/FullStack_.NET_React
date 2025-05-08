@@ -1,3 +1,14 @@
-export default function Catalog() {
-  return <div>Catalog</div>;
+export default function Catalog(props: any) {
+  return (
+    <div>
+      <ul>
+        {props.products.map((item, index) => (
+          <li key={index}>
+            {item.name} - {item.price}
+          </li>
+        ))}
+      </ul>
+      <button onClick={addProduct}>Add Product</button>
+    </div>
+  );
 }
