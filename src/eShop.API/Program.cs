@@ -10,7 +10,7 @@ builder.Services.AddDbContext<StoreContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("StoreConnectionString"));
 });
-
+builder.Services.AddCors();
 
 var app = builder.Build();
 
