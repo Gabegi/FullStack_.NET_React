@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Product } from "./product";
+import { Product } from "../models/product";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -21,7 +21,7 @@ function App() {
         description: "test",
         pictureUrl: "https://picsum.photo/200",
         type: "test",
-        brand:
+        brand: "test",
       },
     ]);
   };
