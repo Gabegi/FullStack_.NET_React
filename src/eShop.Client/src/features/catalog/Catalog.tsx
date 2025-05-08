@@ -1,4 +1,6 @@
-export default function Catalog(props: any) {
+import { Product } from "./app/models/product";
+
+export default function Catalog(props: Product) {
   return (
     <div>
       <ul>
