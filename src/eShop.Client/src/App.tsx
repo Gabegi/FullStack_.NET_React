@@ -14,9 +14,14 @@ function App() {
     setProducts((prevState) => [
       ...prevState,
       {
-        id: 
+        id: prevState.length + 1,
         name: "product" + (prevState.length + 1),
         price: prevState.length * 100 + 100,
+        quantityInStock: 100,
+        description: "test",
+        pictureUrl: "https://picsum.photo/200",
+        type: "test",
+        brand:
       },
     ]);
   };
