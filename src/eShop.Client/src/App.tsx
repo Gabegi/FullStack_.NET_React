@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
+import { Product } from "./product";
 
 function App() {
-  const [products, setProducts] = useState<{ name: string; price: number }[]>(
-    []
-  );
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     fetch("https://localhost:7004/api/Products/")
