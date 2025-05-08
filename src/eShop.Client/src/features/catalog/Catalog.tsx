@@ -8,7 +8,7 @@ export default function Catalog(props: any) {
           </li>
         ))}
       </ul>
-      <button onClick={addProduct}>Add Product</button>
+      <button onClick={props.addProduct}>Add Product</button>
     </div>
   );
 }
