@@ -2,17 +2,17 @@ import { Product } from "../../app/models/product";
 
 type Props = { products: Product[]; addProduct: () => void };
 
-export default function Catalog(props: Props) {
+export default function Catalog({ products, addProduct }: Props) {
   return (
     <div>
       <ul>
-        {props.products.map((item) => (
+        {products.map((item) => (
           <li key={item.id}>
             {item.name} - {item.price}
           </li>
         ))}
       </ul>
-      <button onClick={props.addProduct}>Add Product</button>
+      <button onClick={addProduct}>Add Product</button>
     </div>
   );
 }
