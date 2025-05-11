@@ -12,7 +12,7 @@ export default function Catalog({ products, addProduct }: Props) {
           </li>
         ))}
       </ul>
-      <button onClick={addProduct}>Add Product</button>
+      <button onClick={addProduct}>Add Product by clicking</button>
     </div>
   );
 }
