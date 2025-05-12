@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ mt: 14 }}>
         <Catalog products={products} addProduct={addProduct} />
       </Container>
     </>
