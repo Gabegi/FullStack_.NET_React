@@ -5,7 +5,8 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
+import Navbar from "./Navbar";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -33,16 +34,12 @@ function App() {
   };
 
   return (
-    <Container maxWidth="xl">
-      <Box display="flex" justifyContent="center" gap={3} marginY={3}>
-        <Typography variant="h4">Restore</Typography>
-        <Button variant="contained" onClick={addProduct}>
-          Add Product by clicking
-        </Button>
-      </Box>
-
-      <Catalog products={products} addProduct={addProduct} />
-    </Container>
+    <>
+      <Navbar />
+      <Container maxWidth="xl">
+        <Catalog products={products} addProduct={addProduct} />
+      </Container>
+    </>
   );
 }
 
