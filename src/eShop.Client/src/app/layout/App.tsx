@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { Product } from "../models/product";
 import Catalog from "../../features/catalog/Catalog";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import { Container, Typography } from "@mui/material";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -28,10 +33,10 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Restore</h1>
+    <Container maxWidth="xl">
+      <Typography variant="h4">Restore</Typography>
       <Catalog products={products} addProduct={addProduct} />
-    </div>
+    </Container>
   );
 }
 
