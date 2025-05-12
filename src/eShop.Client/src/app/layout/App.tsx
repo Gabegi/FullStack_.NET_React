@@ -5,7 +5,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Container, Typography } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -35,6 +35,9 @@ function App() {
   return (
     <Container maxWidth="xl">
       <Typography variant="h4">Restore</Typography>
+      <Button variant="contained" onClick={addProduct}>
+        Add Product by clicking
+      </Button>
       <Catalog products={products} addProduct={addProduct} />
     </Container>
   );
