@@ -13,7 +13,9 @@ export default function Catalog({ products, addProduct }: Props) {
           </li>
         ))}
       </ul>
-      <Button onClick={addProduct}>Add Product by clicking</Button>
+      <Button variant="contained" onClick={addProduct}>
+        Add Product by clicking
+      </Button>
     </div>
   );
 }
