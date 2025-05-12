@@ -5,11 +5,17 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Container } from "@mui/material";
+import { Container, createTheme, ThemeProvider } from "@mui/material";
 import Navbar from "./Navbar";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
+
+  const theme = createTheme({
+    palette: {
+      mode: "dark",
+    },
+  });
 
   useEffect(() => {
     fetch("https://localhost:7004/api/Products/")
@@ -34,12 +40,12 @@ function App() {
   };
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Navbar />
       <Container maxWidth="xl" sx={{ mt: 14 }}>
         <Catalog products={products} addProduct={addProduct} />
       </Container>
-    </>
+    </ThemeProvider>
   );
 }
 
