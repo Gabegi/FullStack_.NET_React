@@ -5,7 +5,13 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Box, Container, createTheme, ThemeProvider } from "@mui/material";
+import {
+  Box,
+  Container,
+  createTheme,
+  CssBaseline,
+  ThemeProvider,
+} from "@mui/material";
 import Navbar from "./Navbar";
 
 function App() {
@@ -44,6 +50,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline></CssBaseline>
       <Navbar />
       <Box
         sx={{
