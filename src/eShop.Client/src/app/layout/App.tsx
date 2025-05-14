@@ -5,7 +5,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Container, createTheme, ThemeProvider } from "@mui/material";
+import { Box, Container, createTheme, ThemeProvider } from "@mui/material";
 import Navbar from "./Navbar";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   const theme = createTheme({
     palette: {
       mode: palleteType,
-      background: { default: palleteType === "light" ? "#eaeaea" : "#121212" },
+      background: { default: palleteType === "light" ? "#121212" : "#eaeaea" },
     },
   });
 
@@ -45,9 +45,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <Container maxWidth="xl" sx={{ mt: 14 }}>
-        <Catalog products={products} addProduct={addProduct} />
-      </Container>
+      <Box
+        sx={{
+          minHeight: "100vh",
+          background: darkMode ? "#121212" : "#eaeaea",
+        }}
+      >
+        {" "}
+        <Container maxWidth="xl" sx={{ mt: 14 }}>
+          <Catalog products={products} addProduct={addProduct} />
+        </Container>
+      </Box>
     </ThemeProvider>
   );
 }
