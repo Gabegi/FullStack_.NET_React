@@ -10,10 +10,13 @@ import Navbar from "./Navbar";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
+  const darkMode = true;
+  const palleteType = darkMode ? "dark" : "light";
 
   const theme = createTheme({
     palette: {
-      mode: "dark",
+      mode: palleteType,
+      background: { default: palleteType === "light" ? "#eaeaea" : "#121212" },
     },
   });
 
