@@ -55,7 +55,9 @@ function App() {
       <Box
         sx={{
           minHeight: "100vh",
-          background: darkMode ? "#121212" : "#eaeaea",
+          background: darkMode
+            ? "radial-gradent(circle, #1e3aBa, #111B27"
+            : "radial-gradent(circle, #baecf9, #f09ff",
         }}
       >
         {" "}
