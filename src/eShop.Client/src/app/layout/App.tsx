@@ -61,7 +61,7 @@ function App() {
         }}
       >
         {" "}
-        <Container maxWidth="xl" sx={{ mt: 14 }}>
+        <Container maxWidth="xl" sx={{ mt: 8 }}>
           <Catalog products={products} addProduct={addProduct} />
         </Container>
       </Box>
