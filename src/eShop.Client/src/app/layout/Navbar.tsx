@@ -1,13 +1,13 @@
-import { DarkMode } from "@mui/icons-material";
+import { DarkMode, LightMode } from "@mui/icons-material";
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 
 export default function Navbar() {
-  const darkMode = true
+  const darkMode = true;
   return (
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6">EShop</Typography>
-        <IconButton>{darkMode ? <DarkMode/>} </IconButton>
+        <IconButton>{darkMode ? <DarkMode /> : <LightMode />} </IconButton>
       </Toolbar>
     </AppBar>
   );
