@@ -7,7 +7,9 @@ export default function Navbar() {
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6">EShop</Typography>
-        <IconButton>{darkMode ? <DarkMode /> : <LightMode />} </IconButton>
+        <IconButton>
+          {darkMode ? <DarkMode /> : <LightMode sx={{ color: "yellow" }} />}{" "}
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
