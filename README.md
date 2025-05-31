@@ -1,5 +1,7 @@
-# FullStack_.NET_React
+# FullStack\_.NET_React
 
 WebShop application built on:
+
 - .NET
 - React
+- Vite
