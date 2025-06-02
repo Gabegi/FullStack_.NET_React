@@ -5,3 +5,4 @@ WebShop application built on:
 - .NET
 - React
 - Vite
+- RedUx
