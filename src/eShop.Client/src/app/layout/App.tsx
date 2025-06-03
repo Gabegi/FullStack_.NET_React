@@ -11,6 +11,7 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import Navbar from "./Navbar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const darkMode = true;
@@ -37,7 +38,7 @@ function App() {
       >
         {" "}
         <Container maxWidth="xl" sx={{ mt: 8 }}>
-          <Catalog />
+          <Outlet />
         </Container>
       </Box>
     </ThemeProvider>
