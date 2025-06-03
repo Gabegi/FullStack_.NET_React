@@ -4,6 +4,7 @@ import HomePage from "../../features/Home/HomePage";
 import ProductDetails from "../../features/catalog/ProductDetails";
 import AboutPage from "../../features/about/AboutPage";
 import ContactPage from "../../features/contact/ContactPage";
+import Catalog from "../../features/catalog/Catalog";
 
 export const router = createBrowserRouter([
   {
