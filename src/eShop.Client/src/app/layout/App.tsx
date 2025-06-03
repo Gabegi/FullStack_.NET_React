@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { Product } from "../models/product";
 import Catalog from "../../features/catalog/Catalog";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -25,22 +23,6 @@ function App() {
     },
   });
 
-  const addProduct = () => {
-    setProducts((prevState) => [
-      ...prevState,
-      {
-        id: prevState.length + 1,
-        name: "product" + (prevState.length + 1),
-        price: prevState.length * 100 + 100,
-        quantityInStock: 100,
-        description: "test",
-        pictureUrl: "https://picsum.photo/200",
-        type: "test",
-        brand: "test",
-      },
-    ]);
-  };
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline></CssBaseline>
@@ -55,7 +37,7 @@ function App() {
       >
         {" "}
         <Container maxWidth="xl" sx={{ mt: 8 }}>
-          <Catalog products={products} addProduct={addProduct} />
+          <Catalog />
         </Container>
       </Box>
     </ThemeProvider>
