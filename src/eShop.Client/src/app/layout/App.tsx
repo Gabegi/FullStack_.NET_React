@@ -15,7 +15,6 @@ import {
 import Navbar from "./Navbar";
 
 function App() {
-  const [products, setProducts] = useState<Product[]>([]);
   const darkMode = true;
   const palleteType = darkMode ? "dark" : "light";
 
@@ -25,12 +24,6 @@ function App() {
       background: { default: palleteType === "light" ? "#121212" : "#eaeaea" },
     },
   });
-
-  useEffect(() => {
-    fetch("https://localhost:7004/api/Products/")
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
-  }, []);
 
   const addProduct = () => {
     setProducts((prevState) => [
