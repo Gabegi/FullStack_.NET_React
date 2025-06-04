@@ -1,6 +1,32 @@
 import { DarkMode, LightMode } from "@mui/icons-material";
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 
+const midLinks = [
+  {
+    title: "catalog",
+    path: "/catalog",
+  },
+  {
+    title: "about",
+    path: "/about",
+  },
+  {
+    title: "contact",
+    path: "/contact",
+  },
+];
+
+const rightLinks = [
+  {
+    title: "login",
+    path: "/login",
+  },
+  {
+    title: "register",
+    path: "/register",
+  },
+];
+
 export default function Navbar() {
   const darkMode = true;
   return (
