@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Product } from "../../app/models/product";
 
 export default function ProductDetails() {
-  const { id } = useParams;
+  const { id } = useParams();
   const [product, setProduct] = useState<Product | null>();
 
   useEffect(() => {
