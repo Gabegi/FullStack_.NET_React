@@ -18,7 +18,11 @@ export default function ProductDetails() {
   return (
     <Grid2 container spacing={6} maxWidth="lg" sx={{ mx: "auto" }}>
       <Grid2 size={6}>
-        <img src={product?.pictureUrl} alt={product?.name ?? "product image"} />
+        <img
+          src={product?.pictureUrl}
+          alt={product?.name ?? "product image"}
+          style={{ width: "100%" }}
+        />
       </Grid2>
     </Grid2>
   );
