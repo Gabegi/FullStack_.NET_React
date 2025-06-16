@@ -7,6 +7,7 @@ import {
   Table,
   TableBody,
   TableContainer,
+  TextField,
   Typography,
 } from "@mui/material";
 
@@ -39,9 +40,18 @@ export default function ProductDetails() {
         </Typography>
         <TableContainer>
           <Table sx={{}}>
-            <TableBody></TableBody>
+            <TableBody>Table goes here</TableBody>
           </Table>
         </TableContainer>
+        <Grid2 container spacing={2} marginTop={3}>
+          <Grid2 size={6}>
+            <TextField
+              variant="outlined"
+              type="number"
+              label="quantity in basket"
+            ></TextField>
+          </Grid2>
+        </Grid2>
       </Grid2>
     </Grid2>
   );
