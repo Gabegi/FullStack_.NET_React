@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Product } from "../../app/models/product";
 import {
+  Button,
   Divider,
   Grid2,
   Table,
@@ -49,7 +50,14 @@ export default function ProductDetails() {
               variant="outlined"
               type="number"
               label="quantity in basket"
+              fullWidth
+              defaultValue={1}
             ></TextField>
+          </Grid2>
+          <Grid2 size={6}>
+            <Button color="primary" size="large" variant="contained" fullWidth>
+              Add to basket
+            </Button>
           </Grid2>
         </Grid2>
       </Grid2>
