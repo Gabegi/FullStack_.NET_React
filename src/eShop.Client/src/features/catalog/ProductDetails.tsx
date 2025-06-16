@@ -12,5 +12,14 @@ export default function ProductDetails() {
       .then((response) => response.json())
       .then((data) => setProduct(data));
   }, [id]);
-  return <Grid2></Grid2>;
+
+  if (!product) return <div>Loading...</div>;
+
+  return (
+    <Grid2 container spacing={6} maxWidth="lg" sx={{ mx: "auto" }}>
+      <Grid2 size={6}>
+        <img src={product?.pictureUrl} alt={product?.name ?? "product image"} />
+      </Grid2>
+    </Grid2>
+  );
 }
