@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Product } from "../../app/models/product";
-import { Grid2 } from "@mui/material";
+import {
+  Divider,
+  Grid2,
+  Table,
+  TableBody,
+  TableContainer,
+  Typography,
+} from "@mui/material";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -23,6 +30,18 @@ export default function ProductDetails() {
           alt={product?.name ?? "product image"}
           style={{ width: "100%" }}
         />
+      </Grid2>
+      <Grid2 size={6}>
+        <Typography variant="h3">{product.name}</Typography>
+        <Divider sx={{ mb: 2 }} />
+        <Typography variant="h4" color="secondary">
+          ${(product.price / 100).toFixed(2)}
+        </Typography>
+        <TableContainer>
+          <Table sx={{}}>
+            <TableBody></TableBody>
+          </Table>
+        </TableContainer>
       </Grid2>
     </Grid2>
   );
