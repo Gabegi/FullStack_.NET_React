@@ -4,9 +4,9 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Link,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Product } from "../../app/models/product";
 
 type Props = { product: Product };
