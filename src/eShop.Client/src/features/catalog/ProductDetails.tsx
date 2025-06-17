@@ -7,7 +7,9 @@ import {
   Grid2,
   Table,
   TableBody,
+  TableCell,
   TableContainer,
+  TableRow,
   TextField,
   Typography,
 } from "@mui/material";
@@ -23,6 +25,14 @@ export default function ProductDetails() {
   }, [id]);
 
   if (!product) return <div>Loading...</div>;
+
+  const productDetails = [
+    { label: "Name", value: product.name },
+    { label: "Description", value: product.description },
+    { label: "Type", value: product.type },
+    { label: "Brand", value: product.brand },
+    { label: "Quantity in stock", value: product.quantityInStock },
+  ];
 
   return (
     <Grid2 container spacing={6} maxWidth="lg" sx={{ mx: "auto" }}>
@@ -41,7 +51,16 @@ export default function ProductDetails() {
         </Typography>
         <TableContainer>
           <Table sx={{}}>
-            <TableBody>Table goes here</TableBody>
+            <TableBody>
+              {productDetails.map((detail, index) => (
+                <TableRow key={index}>
+                  <TableCell sx={{ fontweight: "bold" }}>
+                    {detail.label}
+                  </TableCell>
+                  <TableCell>{detail.value}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
         <Grid2 container spacing={2} marginTop={3}>
