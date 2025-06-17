@@ -50,7 +50,7 @@ export default function ProductDetails() {
           ${(product.price / 100).toFixed(2)}
         </Typography>
         <TableContainer>
-          <Table sx={{}}>
+          <Table sx={{ "& td": { fonfsize: "1rem" } }}>
             <TableBody>
               {productDetails.map((detail, index) => (
                 <TableRow key={index}>
@@ -74,7 +74,13 @@ export default function ProductDetails() {
             ></TextField>
           </Grid2>
           <Grid2 size={6}>
-            <Button color="primary" size="large" variant="contained" fullWidth>
+            <Button
+              sx={{ height: "55px" }}
+              color="primary"
+              size="large"
+              variant="contained"
+              fullWidth
+            >
               Add to basket
             </Button>
           </Grid2>
