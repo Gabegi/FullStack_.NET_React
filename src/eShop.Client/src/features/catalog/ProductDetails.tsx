@@ -24,7 +24,7 @@ export default function ProductDetails() {
       .then((data) => setProduct(data));
   }, [id]);
 
-  if (!product) return <div>Loading...</div>;
+  if (!product) return <div>Could not fetch product details...</div>;
 
   const productDetails = [
     { label: "Name", value: product.name },
