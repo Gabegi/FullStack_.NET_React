@@ -7,5 +7,4 @@ WebShop application built on:
 - API (Controllers)
 - React
 - Vite
-- RedUx
 - Routing
