@@ -2,7 +2,7 @@
 
 WebShop application built on:
 
-- .NET
+- .NET core
 - EF Core
 - API (Controllers)
 - React
